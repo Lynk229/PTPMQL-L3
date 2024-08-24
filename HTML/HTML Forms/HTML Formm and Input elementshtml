@@ -2,7 +2,8 @@
 <html>
 <body>
 
-<h1>Thông tin sinh viên</h1>
+<h1>Lê Khánh Ly - 2021050423</h1>
+<h2>Thông tin sinh viên</h2>
 
 <form action="/action_page.php">
     <label for="fname">Fullname:</label><br>
