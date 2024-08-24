@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Thông tin sinh viên</h1>
+
+<form action="/action_page.php">
+    <label for="fname">Fullname:</label><br>
+    <input type="text" id="fname" name="fname" value="LÊ KHÁNH LY"><br>
+    <label for="lname">StudentID:</label><br>
+    <input type="text" id="ID" name="ID" value="2021050423"><br><br>
+    <input type="submit" value="Submit">
+</form> 
+
+<!--
+<form></form> - Xác định biểu mẫu HTML cho đầu vào của người dùng
+<input></input> - Xác định điều khiển đầu vào
+<readonly></readonly> - Thuộc tính input chỉ định rằng trường input là chỉ đọc
+<disabled></disabled> - Thuộc tính input chỉ định rằng một trường đầu vào sẽ bị tắt
+<size></size> - Thuộc tính input chỉ định chiều rộng hiển thị, tính bằng ký tự, của trường nhập
+<maxlength></maxlength> - Thuộc tính input chỉ định số ký tự tối đa được phép trong một trường nhập
+<min></min>và<max></max> - Đầu vào và thuộc tính chỉ định các giá trị tối thiểu và tối đa cho một trường nhập
+<multiple></multiple> - Thuộc tính input chỉ định rằng người dùng được phép nhập nhiều hơn một giá trị vào một trường đầu vào
+<pattern></pattern> - Thuộc tính input chỉ định một biểu thức chính quy mà Giá trị của trường nhập liệu được kiểm tra khi biểu mẫu được gửi
+<placeholder></placeholder> - Thuộc tính input chỉ định Một gợi ý ngắn mô tả giá trị kỳ vọng của trường đầu vào (giá trị mẫu hoặc mô tả ngắn về định dạng dự kiến)
+<required></required> - Thuộc tính input chỉ định rằng một trường đầu vào phải được điền trước khi gửi biểu mẫu
+<step></step> - Thuộc tính input chỉ định các khoảng số pháp lý cho một trường nhập
+<autofocus></autofocus> - Thuộc tính input chỉ định rằng Trường nhập liệu sẽ tự động lấy tiêu điểm khi tải trang
+<height></height> và <width></width> - Đầu vào và thuộc tính chỉ định chiều cao và chiều rộng của một phần tử<input type="image">
+<datalist></datalist> - Thuộc tính input đề cập đến một phần tử chứa các tùy chọn được xác định trước cho phần tử <input>
+<autocomplete></autocomplete> - Thuộc tính input chỉ định biểu mẫu hay Trường nhập liệu phải bật hoặc tắt Tự động Hoàn tất
+-->
+
+
+</body>
+</html>
