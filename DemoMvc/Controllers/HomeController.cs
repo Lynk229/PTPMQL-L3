@@ -31,6 +31,20 @@ private readonly ILogger<HomeController> _logger;
         return View();
     }
 
+    public IActionResult Demo()
+    {
+        return View();
+    }    
+
+    [HttpPost]
+    public IActionResult Demo(string Fullname)
+    {
+        string strResult = "Xin chào" + Fullname ;
+        ViewBag.thongbao = strResult;
+        return View();
+    }
+
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
