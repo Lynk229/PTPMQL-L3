@@ -20,9 +20,9 @@ private readonly ILogger<StudentController> _logger;
     }    
 
     [HttpPost]
-    public IActionResult Index(string Fullname, string StudentID, string STT)
+    public IActionResult Index(string Fullname, string StudentID, string Address)
     {
-        string strOutput = "Xin chào" + Fullname + "-" + StudentID + "-" + STT ;
+        string strOutput = "Xin chào" + Fullname + "-" + StudentID + "-" + Address ;
         ViewBag.HH = strOutput;
         return View();
     }
