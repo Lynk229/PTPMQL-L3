@@ -14,6 +14,6 @@ namespace DemoMvc.Data
         {
         }
 
-        public DbSet<DemoMVC.Models.Daily> Daily { get; set; } = default!;
+        public DbSet <Daily> Daily { get; set; } = default!;
     }
 }

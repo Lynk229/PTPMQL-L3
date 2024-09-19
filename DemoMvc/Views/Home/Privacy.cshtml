@@ -3,6 +3,15 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
 
-dotnet aspnet-codegenerator controller -name StudentController -m Student -dc DemoMvc.Data.ApplicationDbContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries --databaseProvider sqlite
+<!-- lenh sinh code tu dong -->
+<p>dotnet aspnet-codegenerator controller -name StudentController 
+-m Student -dc DemoMvc.Data.ApplicationDbContext --relativeFolderPath Controllers 
+--useDefaultLayout --referenceScriptLibraries --databaseProvider sqlite</p>
+
+<!--  lenh chay them bang hoac them cot -->
+<p>dotnet ef migrations add Create_table_Ten class</p>
+<p>HOAC</p>
+<p>dotnet ef migrations add Create_Column_Ten class</p>
+<p>SAU GO LENH</p>
+<p>dotnet ef database update</p>
