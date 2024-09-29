@@ -74,6 +74,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/PTPMQL/DemoMvc/Views/Thisinh/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhpc2luaFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PTPMQL/DemoMvc/Views/Thisinh/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhpc2luaFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/PTPMQL/DemoMvc/Views/Thongtin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhvbmd0aW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
