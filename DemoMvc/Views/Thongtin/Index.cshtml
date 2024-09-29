@@ -1,16 +1,15 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>@ViewBag.TT</h1>
+
 <form asp-action="Index">
-    <label>Họ tên:</label>
-    <input type="text" name="Fullname">
-     <label>Tuổi:</label>
-    <input type="number" name="Tuoi">
-     <label>Địa chỉ:</label>
-    <input type="text" name="Adderss">
-    <input type="submit" value="send">
+    <label>Nhập Mã NV:</label>
+    <input type="text" name= "MaNV">
+    <label>Nhập Họ Tên NV:</label>
+    <input type="text" name= "TenNV">
+    <label>Nhập Tuoi NV:</label>
+    <input type="text" name= "Tuoi">
+    <input type="submit" value= "Gửi dữ liệu">
 </form>
-<h2>@ViewBag.tbmn</h2>
-
-
-<!--
-Lê Khánh Ly - 2021050423
-Bài thực hành trên lớp ngày 27/08
--->

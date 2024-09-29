@@ -5,21 +5,23 @@
 namespace DemoMvc.Migrations
 {
     /// <inheritdoc />
-    public partial class Create_table_Daily : Migration
+    public partial class Create_table_Employe : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Daily",
+                name: "Employe",
                 columns: table => new
                 {
-                    Fullname = table.Column<string>(type: "TEXT", nullable: false),
-                    Adderss = table.Column<string>(type: "TEXT", nullable: true)
+                    EmployeID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Fullname = table.Column<string>(type: "TEXT", nullable: true),
+                    Diachi = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Daily", x => x.Fullname);
+                    table.PrimaryKey("PK_Employe", x => x.EmployeID);
                 });
         }
 
@@ -27,7 +29,7 @@ namespace DemoMvc.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Daily");
+                name: "Employe");
         }
     }
 }

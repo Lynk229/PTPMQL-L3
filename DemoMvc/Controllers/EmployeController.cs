@@ -5,90 +5,90 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using DemoMVC.Models;
 using DemoMvc.Data;
+using DemoMvc.Models;
 
 namespace DemoMvc.Controllers
 {
-    public class DailyController : Controller
+    public class EmployeController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public DailyController(ApplicationDbContext context)
+        public EmployeController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Daily
+        // GET: Employe
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Daily.ToListAsync());
+            return View(await _context.Employe.ToListAsync());
         }
 
-        // GET: Daily/Details/5
-        public async Task<IActionResult> Details(string id)
+        // GET: Employe/Details/5
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var daily = await _context.Daily
-                .FirstOrDefaultAsync(m => m.Fullname == id);
-            if (daily == null)
+            var employe = await _context.Employe
+                .FirstOrDefaultAsync(m => m.EmployeID == id);
+            if (employe == null)
             {
                 return NotFound();
             }
 
-            return View(daily);
+            return View(employe);
         }
 
-        // GET: Daily/Create
+        // GET: Employe/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Daily/Create
+        // POST: Employe/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Fullname,Tuoi,Adderss")] Daily daily)
+        public async Task<IActionResult> Create([Bind("EmployeID,Fullname,Diachi")] Employe employe)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(daily);
+                _context.Add(employe);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(daily);
+            return View(employe);
         }
 
-        // GET: Daily/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        // GET: Employe/Edit/5
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var daily = await _context.Daily.FindAsync(id);
-            if (daily == null)
+            var employe = await _context.Employe.FindAsync(id);
+            if (employe == null)
             {
                 return NotFound();
             }
-            return View(daily);
+            return View(employe);
         }
 
-        // POST: Daily/Edit/5
+        // POST: Employe/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Fullname,Tuoi,Adderss")] Daily daily)
+        public async Task<IActionResult> Edit(int id, [Bind("EmployeID,Fullname,Diachi")] Employe employe)
         {
-            if (id != daily.Fullname)
+            if (id != employe.EmployeID)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace DemoMvc.Controllers
             {
                 try
                 {
-                    _context.Update(daily);
+                    _context.Update(employe);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DailyExists(daily.Fullname))
+                    if (!EmployeExists(employe.EmployeID))
                     {
                         return NotFound();
                     }
@@ -113,45 +113,45 @@ namespace DemoMvc.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(daily);
+            return View(employe);
         }
 
-        // GET: Daily/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        // GET: Employe/Delete/5
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var daily = await _context.Daily
-                .FirstOrDefaultAsync(m => m.Fullname == id);
-            if (daily == null)
+            var employe = await _context.Employe
+                .FirstOrDefaultAsync(m => m.EmployeID == id);
+            if (employe == null)
             {
                 return NotFound();
             }
 
-            return View(daily);
+            return View(employe);
         }
 
-        // POST: Daily/Delete/5
+        // POST: Employe/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var daily = await _context.Daily.FindAsync(id);
-            if (daily != null)
+            var employe = await _context.Employe.FindAsync(id);
+            if (employe != null)
             {
-                _context.Daily.Remove(daily);
+                _context.Employe.Remove(employe);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool DailyExists(string id)
+        private bool EmployeExists(int id)
         {
-            return _context.Daily.Any(e => e.Fullname == id);
+            return _context.Employe.Any(e => e.EmployeID == id);
         }
     }
 }

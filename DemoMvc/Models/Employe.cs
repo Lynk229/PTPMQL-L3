@@ -1,12 +1,14 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace DemoMvc.Models
 {
-    public class Student
+    [Table("Employe")]
+    public class Employe
     {
         [Key]
-        public int StudentID { get; set;}
+        public int EmployeID { get; set;}
         public string? Fullname { get; set;}
         public string? Diachi { get; set;}
     }

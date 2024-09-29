@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>@ViewBag.PP</h1>
+
+<form asp-action="Index">
+    <label>Nhập ID Dại lý:</label>
+    <input type="text" name= "DailyID">
+    <label>Nhập Họ Tên Dại lý:</label>
+    <input type="text" name= "Tendaily">
+    <label>Nhập Địa chỉ Dại lý:</label>
+    <input type="text" name= "Diachi">
+    <input type="submit" value= "Gửi dữ liệu">
+</form>

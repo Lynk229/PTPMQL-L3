@@ -1,4 +1,4 @@
-@model DemoMVC.Models.Daily
+@model DemoMvc.Models.Employe
 
 @{
     ViewData["Title"] = "Details";
@@ -7,24 +7,24 @@
 <h1>Details</h1>
 
 <div>
-    <h4>Daily</h4>
+    <h4>Employe</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Tuoi)
+            @Html.DisplayNameFor(model => model.Fullname)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Tuoi)
+            @Html.DisplayFor(model => model.Fullname)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Adderss)
+            @Html.DisplayNameFor(model => model.Diachi)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Adderss)
+            @Html.DisplayFor(model => model.Diachi)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Fullname">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.EmployeID">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>

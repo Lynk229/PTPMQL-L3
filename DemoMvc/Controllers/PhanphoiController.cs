@@ -4,11 +4,11 @@ using DemoMvc.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace DemoMvc.Controllers;
-public class ThongtinController : Controller
+public class PhanphoiController : Controller
 
-{private readonly ILogger<ThongtinController> _logger;
+{private readonly ILogger<PhanphoiController> _logger;
 
-    public ThongtinController(ILogger<ThongtinController> logger)
+    public PhanphoiController(ILogger<PhanphoiController> logger)
     {
         _logger = logger;
     }
@@ -18,14 +18,16 @@ public class ThongtinController : Controller
         }
 
     [HttpPost]
-    public IActionResult Index(string MaNV, string TenNV, string Tuoi )
+    public IActionResult Index(string DailyID, string Tendaily, string Diachi )
     {
-        string strOutput = "Xin chào" + MaNV + "-" + TenNV + "-" + Tuoi;
-        ViewBag.TT = strOutput;
+        string strOutput = "Xin chào" + DailyID + "-" + Tendaily + "-" + Diachi;
+        ViewBag.PP = strOutput;
         return View();
     }
     public IActionResult Privacy()
     {
         return View();
     }
+
+      
     }
