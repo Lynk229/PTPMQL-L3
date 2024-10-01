@@ -14,8 +14,8 @@ namespace DemoMvc.Data
             : base(options)
         {}
 
-        public DbSet <Employe> Employe { get; set; } = default!;
-        public DbSet <Thisinh> Thisinh { get; set; } = default!;
+        public DbSet <Person> Person { get; set; } = default!;
+        
 
     }
 }

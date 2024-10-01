@@ -16,35 +16,21 @@ namespace DemoMvc.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
 
-            modelBuilder.Entity("DemoMvc.Models.Employe", b =>
+            modelBuilder.Entity("DemoMvc.Models.Person", b =>
                 {
-                    b.Property<int>("EmployeID")
+                    b.Property<int>("CCCD")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Diachi")
+                    b.Property<string>("HoTen")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Fullname")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("EmployeID");
-
-                    b.ToTable("Employe");
-                });
-
-            modelBuilder.Entity("DemoMvc.Models.Thisinh", b =>
-                {
-                    b.Property<int>("ThisinhID")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("QueQuan")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Fullname")
-                        .HasColumnType("TEXT");
+                    b.HasKey("CCCD");
 
-                    b.HasKey("ThisinhID");
-
-                    b.ToTable("Thisinh");
+                    b.ToTable("Person");
                 });
 #pragma warning restore 612, 618
         }

@@ -5,7 +5,7 @@
 namespace DemoMvc.Migrations
 {
     /// <inheritdoc />
-    public partial class Create_Column_Employe : Migration
+    public partial class Create_Column_Person : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
